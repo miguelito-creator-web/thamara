@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi vida, ya falta poco para vernos</h1>
+    <p>y solo quería preguntarte si quisieras ser mi San Valentín?</p>
+    <button id="yesBtn">Sí</button>
+    <button id="noBtn">No</button>
+    <p id="response" class="hidden">¡Gracias por aceptar!</p>
+    <p id="tryAgain" class="hidden">Por favor, vuelve a intentarlo.</p>
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            document.getElementById("response").classList.remove("hidden");
+            document.getElementById("tryAgain").classList.add("hidden");
+        });
+        document.getElementById("noBtn").addEventListener("click", function() {
+            document.getElementById("tryAgain").classList.remove("hidden");
+            document.getElementById("response").classList.add("hidden");
+        });
+    </script>
+    <p><a href="https://example.com">Comparte esta página</a></p>
+</body>
+</html>
